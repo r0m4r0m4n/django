@@ -1,0 +1,26 @@
+{% extends 'shop/base_blog.html' %}
+
+{% block title %}
+    Edit Order "{{ tag.title|title }}"- {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+    <form action="{{ order.get_update_url }}" method="post">
+    {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {% if field.errors %}
+                    <div class="alert alert-danger">
+                        {{ field.errors }}
+                    </div>
+                {% endif %}
+                {{ field.label }}
+            {{ field }}
+            </div>
+        {% endfor %}
+
+    <button type="Submit" class="btn btn-outline-success"> Update order</button>
+    </form>
+
+{% endblock %}

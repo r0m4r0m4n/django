@@ -21,8 +21,8 @@
     </title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c9e1f2;">
-    <a class="navbar-brand" href="#">MyBlog</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #41B3A3;">
+    <a class="navbar-brand" href="{% url "orders_list_url" %}">Orders</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href={% url "posts_list_url" %}> Posts </a>
+                <a class="nav-link" href={% url "product_list_url" %}> Products </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'tags_list_url' %}">Tags</a>
@@ -49,7 +49,8 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="{% url 'measurements:navigation_map_url' %}" tabindex="-1"
+                   aria-disabled="true">Navigation</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

@@ -1,0 +1,18 @@
+<div class="card mb-4">
+    <div class="card-header">
+        {{ order.date_of_creation }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ order.name }}</h5>
+
+        <a href='{{ order.get_absolute_url }}' class="btn btn-outline-primary">Read</a>
+        <a href='{{ order.get_update_url }}' class="btn btn-outline-primary">Edit</a>
+    </div>
+    <div class="card-footer text-muted">
+        Tags:
+        {% for tag in post.tags.all %}
+            <a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a>
+        {% endfor %}
+    </div>
+</div>
+

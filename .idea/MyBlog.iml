@@ -4,7 +4,7 @@
     <facet type="django" name="Django">
       <configuration>
         <option name="rootFolder" value="$MODULE_DIR$" />
-        <option name="settingsModule" value="MyBlog/settings.py" />
+        <option name="settingsModule" value="Deliveryapp/settings.py" />
         <option name="manageScript" value="$MODULE_DIR$/manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
         <option name="doNotUseTestRunner" value="false" />
@@ -14,17 +14,24 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <sourceFolder url="file://$MODULE_DIR$/shop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Deliveryapp" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery-3.5.1.slim" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../MyBlog\templates" />
+        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/shop/templates" />
+        <option value="$MODULE_DIR$/shop/templates/shop" />
+        <option value="$MODULE_DIR$/shop/templates/shop/includes" />
+        <option value="$MODULE_DIR$/shop/templates/shop/order" />
+        <option value="$MODULE_DIR$/shop/templates/shop/product" />
+        <option value="$MODULE_DIR$/shop/templates/shop/tag" />
       </list>
     </option>
   </component>

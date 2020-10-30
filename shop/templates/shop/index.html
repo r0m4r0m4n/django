@@ -1,0 +1,10 @@
+{% extends 'shop/base_blog.html' %}
+{% block title %}
+    Products
+{% endblock %}
+{% block content %}
+    <h1 class="mb-5">Products:</h1>
+    {% for product in page_object.object_list %}
+        {% include 'shop/includes/product_card_template.html' %}
+    {% endfor %}
+{% endblock %}

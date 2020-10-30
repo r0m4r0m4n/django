@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block admin-panel %}
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            Create
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item btn btn-success :hover" href="{% url 'product_create_url' %} ">Product</a>
+            <a class="dropdown-item btn btn-success" href="{% url 'tag_create_url' %}  ">Tag</a>
+            <a class="dropdown-item btn btn-success" href="{% url 'order_create_url' %}  ">Order</a>
+        </div>
+    </div>
+
+
+    <a href="{{ admin_object.get_update_url }}" class="btn btn-outline-warning edit"
+       style="{% if detail %} display: block;{% endif %}"> Edit </a>
+    <a href="{{ admin_object.get_delete_url }}" class="btn btn-outline-danger delete"
+       style="{% if detail %} display: block;{% endif %}"> Delete </a>
+
+
+
+{% endblock %}

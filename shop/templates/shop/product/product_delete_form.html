@@ -1,0 +1,14 @@
+{% extends 'shop/base_blog.html' %}
+
+{% block title %}
+    Delete product
+{% endblock %}
+
+{% block content %}
+    <form action="{{ product.get_delete_url }}" method="post">
+        {% csrf_token %}
+        <h3> А ты точно хочешь удалить <b> "{{ product.title|title }}"</b> Product?</h3>
+        <a href="{{ product.get_absolute_url }}" class="btn btn-outline-primary">Cancel</a>
+        <button type=submit name='button' class="btn btn-outline-danger"> Delete</button>
+    </form>
+{% endblock %}

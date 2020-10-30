@@ -1,0 +1,10 @@
+{% extends 'shop/base_blog.html' %}
+{% block title %}
+    Posts
+{% endblock %}
+{% block content %}
+    <h1 class="mb-5">Orders:</h1>
+    {% for order in page_object.object_list %}
+        {% include 'shop/includes/order_card_template.html' %}
+    {% endfor %}
+{% endblock %}

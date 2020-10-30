@@ -1,0 +1,17 @@
+<div class="card mb-4">
+    <div class="card-header">
+        {{ product.date_pub }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.body|truncatewords:15 }}</p>
+        <a href='{{ product.get_absolute_url }}' class="btn btn-outline-primary">Read</a>
+        <a href='{{ product.get_update_url }}' class="btn btn-outline-primary">Edit</a>
+    </div>
+    <div class="card-footer text-muted">
+        Tags:
+        {% for tag in product.tags.all %}
+            <a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a>
+        {% endfor %}
+    </div>
+</div>
